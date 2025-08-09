@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Services | N13 Beauty Care</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" />
+    <link rel="stylesheet" href="styles.css" media="screen and (min-width: 769px)" />
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav">
+            <div class="logo"><a href="index.html"><img src="images/logo/Logo1.png" alt="N13 Logo" style="height:80px; width:80px; "></a></div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+            <nav>
+                <ul id="navMenu">
+                     <li><a href="index.html" style="color:inherit; text-decoration:none;">Home</a></li>
+                    <li class="active"><a href="products.html" style="color:inherit; text-decoration:none;">Products & Services</a></li>
+                    <li><a href="academy.html" style="color:inherit; text-decoration:none;">Academy</a></li>
+                    <li><a href="contactus.html" style="color:inherit; text-decoration:none;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="products-hero">
+        <div class="products-hero-img">
+            <div class="products-hero-overlay">
+                <h1>Products & Services</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Switcher -->
+    <div class="container">
+        <div class="products-tabs">
+            <a href="products.html" class="products-tab active" style="text-decoration:none;">Services</a>
+            <a href="product.html" class="products-tab" style="text-decoration:none;">Products</a>
+        </div>
+
+        <!-- Premium Makeup Section -->
+        <h2 class="products-section-title">Premium Makeup</h2>
+        <div class="products-premium-grid">
+            <div class="products-premium-card">
+                <div class="products-premium-icon"><img src="images/icon1.png" alt="HP Makeup"></div>
+                <h3>HP Makeup</h3>
+                <p>1 Saree Change Complimentary</p>
+                <div class="products-premium-bottom">
+                    <span class="products-premium-price">₹ 15,000</span>
+                    <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20HP%20Makeup%20from%20Premium%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+                </div>
+            </div>
+            <div class="products-premium-card">
+                <div class="products-premium-icon"><img src="images/icon-airbrush.png" alt="Airbrush Makeup"></div>
+                <h3>Airbrush Makeup</h3>
+                <p>1 Saree Change with pre pleating</p>
+                <div class="products-premium-bottom">
+                    <span class="products-premium-price">₹ 17,000</span>
+                   <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Airbrush%20Makeup%20from%20Premium%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+                </div>
+            </div>
+            <div class="products-premium-card">
+                <div class="products-premium-icon"><img src="images/icon-waterproof.png" alt="Sweet & Water Proof"></div>
+                <h3>Sweet & Water Proof Makeup</h3>
+                <p>2 Saree Change with 2 saree pre pleating, Nail extension, Mehandi, Veni Complimentary.</p>
+                <div class="products-premium-bottom">
+                    <span class="products-premium-price">₹ 25,000</span>
+                    <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Sweet%20&%20Water%20Proof%20Makeup%20from%20Premium%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+                </div>
+            </div>
+            <div class="products-premium-card">
+                <div class="products-premium-icon"><img src="images/icon-bridal.png" alt="International Bridal Makeup"></div>
+                <h3>International Bridal Makeup</h3>
+                <p>2 Saree Change with 2 saree pre pleating, Nail extension, Mehandi, Veni, Groom makeup</p>
+                <div class="products-premium-bottom">
+                    <span class="products-premium-price">₹ 35,000</span>
+                    <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20International%20Bridal%20Makeup%20from%20Premium%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+                </div>
+            </div>
+            <div class="products-premium-card">
+                <div class="products-premium-icon"><img src="images/icon2.png" alt="Groom Makeup"></div>
+                <h3>Groom Makeup</h3>
+                <p></p>
+                <div class="products-premium-bottom">
+                    <span class="products-premium-price">₹ 10,000</span>
+                    <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Groom%20Makeup%20from%20Premium%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saloon Services Section -->
+        <h2 class="products-section-title" style="margin-top: 48px;" id="saloon-title">Saloon services</h2>
+        <div class="products-saloon-grid" id="saloon-section">
+           
+            <!-- Threading -->
+            <div class="products-saloon-card saloon-page1">
+                <h4>Threading</h4>
+                <ul>
+                    <li>Eyebrow <span>₹ 50</span></li>
+                    <li>Upper Lip/ Lower Lip <span>₹ 30/35</span></li>
+                    <li>Chin/Forehead <span>₹ 60/45</span></li>
+                    <li>Face Sides <span>₹ 40</span></li>
+                    <li>Full Face <span>₹ 120</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Threading"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Face Waxing -->
+            <div class="products-saloon-card saloon-page1">
+                <h4>Face Waxing</h4>
+                <ul>
+                    <li>Upper Lip <span>₹ 100</span></li>
+                    <li>Chin <span>₹ 80</span></li>
+                    <li>Face Sides <span>₹ 100</span></li>
+                    <li>Face <span>₹ 350</span></li>
+                    <li>Upper Arms <span>₹ 200</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Face%20Waxing"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Insta Fresh Clean Up -->
+            <div class="products-saloon-card saloon-page1">
+                <h4>Insta Fresh Clean Up</h4>
+                <ul>
+                    <li>Fruit <span>₹ 1200</span></li>
+                    <li>Charcoal <span>₹ 1300</span></li>
+                    <li>Gold <span>₹ 1500</span></li>
+                    <li>Diamond <span>₹ 1500</span></li>
+                    <li>Pearl <span>₹ 1500</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Insta%20Fresh%20Clean%20Up"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Hair Spa Treatment -->
+            <div class="products-saloon-card saloon-page1">
+                <h4>Hair Spa Treatment <span class="products-badge">Short</span> <span class="products-badge">Long</span></h4>
+                <ul>
+                    <li>Moisturizing Hair Spa <span>₹ 1500 / 2000</span></li>
+                    <li>Color Save <span>₹ 1500 / 2000</span></li>
+                    <li>Frizz Ease <span>₹ 1800 / 2000</span></li>
+                    <li>Repair & Rejuvenate <span>₹ 1500 / 2000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Hair%20Spa%20Treatment"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Detan Bleach -->
+            <div class="products-saloon-card saloon-page1">
+                <h4>Detan Bleach</h4>
+                <ul>
+                    <li>Upper Lip <span>₹ 100</span></li>
+                    <li>Upper Arms <span>₹ 120</span></li>
+                    <li>Feet <span>₹ 220</span></li>
+                    <li>Face/Neck <span>₹ 550</span></li>
+                    <li>Face, Neck, Blouse Line <span>₹ 660</span></li>
+                    <li>Half Arms/Legs <span>₹ 440/660</span></li>
+                    <li>Full Arms/Legs <span>₹ 700/800</span></li>
+                    <li>Full Back <span>₹ 700</span></li>
+                    <li>Full Body <span>₹ 1000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Detan%20Bleach"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Fashion colors -->
+            <div class="products-saloon-card saloon-page1">
+                <h4>Fashion colors</h4>
+                <ul>
+                    <li>Root Touch Up <span>₹ 1500/1700</span></li>
+                    <li>Global <span>₹ 800/4500/5000</span></li>
+                    <li>Global Fission Color <span>₹ 3600/4200/4500</span></li>
+                    <li>Global Highlights <span>₹ 6000</span></li>
+                    <li>Highlights (Partial / Full) <span>₹ 2500/3500</span></li>
+                    <li>Highlights (Per Streaks) <span>₹ 450</span></li>
+                    <li>Hena Black <span>₹ 2000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Fashion%20Colors"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            
+            <!-- Luxury Facial (Page 2) -->
+            <div class="products-saloon-card saloon-page2" style="display:none;">
+                <h4>Luxury Facial</h4>
+                <ul>
+                    <li>Skin Brighting<span>₹ 5000</span></li>
+                    <li>Ultra Gold<span>₹ 5000</span></li>
+                    <li>Beauty & Glow <span>₹ 6000</span></li>
+                    <li>Anti Ageing/ Skin Tightening<span>₹ 5600</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Luxury%20Facial"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page2" style="display:none;">
+                <h4>Add On Mask</h4>
+                <ul>
+                    <li>Brightening Mask<span>₹ 1000</span></li>
+                    <li>Lightening Mask<span>₹ 1200</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Add%20On%20Mask"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page2" style="display:none;">
+                <h4>Add On Skin Care</h4>
+                <ul>
+                    <li>Under Arms Brightening<span>₹ 1000</span></li>
+                    <li>Under Eye Brightening<span>₹ 900</span></li>
+                    <li>Neck & Elbow <span>₹ 1000</span></li>
+                   
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Add%20On%20Skin%20Care"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page2" style="display:none;">
+                <h4>Glow Facial</h4>
+                <ul>
+                    <li>Fruit<span>₹ 2000</span></li>
+                    <li>Detan<span>₹ 2500</span></li>
+                    <li>Charcoal <span>₹ 2300</span></li>
+                    <li>Gold<span>₹ 3000</span></li>
+                    <li>Daimond<span>₹ 3000</span></li>
+                    <li>Pearl<span>₹ 3000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Glow%20Facial"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page2" style="display:none;">
+                <h4>Ped Off Wooxing</h4>
+                <ul>
+                    <li>Half Arms / Legs<span>₹ 600/ 800</span></li>
+                    <li>Full Arms/Legs<span>₹ 800/ 1000</span></li>
+                    <li>Full Back <span>₹ 900</span></li>
+                    <li>Full Legs<span>₹ 3500</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Ped%20Off%20Wooxing"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page2" style="display:none;">
+                <h4>Manicure / Pedicure</h4>
+                <ul>
+                    <li>Cocoa Butter- Mani / Pedi<span>₹ 600/ 700</span></li>
+                    <li>Coffee & Cream Mani / Pedi<span>₹ 800/ 900</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Manicure%20Pedicure"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Spa Manicure / Pedicure (Page 3) -->
+            <div class="products-saloon-card saloon-page3" style="display:none;">
+                <h4>Spa Manicure / Pedicure</h4>
+                <ul>
+                    <li>Organic<span>₹ 1000/ 1100</span></li>
+                    <li>Crystal<span>₹ 1100/ 1200</span></li>
+                    <li>Ice Cream (Combo) <span>₹ 3000</span></li>
+                    <li>Peel of Heel Treatment<span>₹ 2500</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Spa%20Manicure%20Pedicure"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page3" style="display:none;">
+                <h4>Nail Polish</h4>
+                <ul>
+                    <li>Change of Nail Colour<span>₹ 120</span></li>
+                    <li>Cut, File & Polish<span>₹ 150/ 1200</span></li>
+                    <li>French Polish (Finger/Toes) <span>₹ 300</span></li>
+                    
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Nail%20Polish"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page3" style="display:none;">
+                <h4>Hair Styling</h4>
+                <ul>
+                    <li>Basic Cuts (V, U Cut/Straight Cut) (Hair Wash Not Include)<span>₹ 500</span></li>
+                    <li>Hair Wash<span>₹ 500</span></li>
+                    <li>Layer Trim <span>₹ 900</span></li>
+                    <li>Change of Styling With Hair Wash (Stylist/Senior Stylist)<span>₹ 1000/1500</span></li>
+                    <li>Fringe / Bangs<span>₹ 350</span></li>
+                    <li>Kids Cut<span>₹ 400</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Hair%20Styling"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page3" style="display:none;">
+                <h4>Posture Matters</h4>
+                <ul>
+                    <li>Smoothening (Medium/Long)<span>₹ 9000/12000</span></li>
+                    <li>Keratin (Medium/Long)<span>₹ 9000/12000</span></li>
+                    <li>Re- Growth Partial Straightening <span>₹ 10000</span></li>
+                    <li>Botox<span>₹ 10000/13000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Posture%20Matters"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page3" style="display:none;">
+                <h4>Hair Treatment</h4>
+                <ul>
+                    <li>Head Massage<span>₹ 800</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Hair%20Treatment"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page3" style="display:none;">
+                <h4>Sealp Treatment</h4>
+                <ul>
+                    <li>Anti Hairfall Treatment<span>₹ 2200</span></li>
+                    <li>Dandruff Control<span>₹ 12000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Scalp%20Treatment"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Miers Blading (Page 4) -->
+            <div class="products-saloon-card saloon-page4" style="display:none;">
+                <h4>Miers Blading</h4>
+                <ul>
+                    <li>Eye Brow (Both Eye Brows)<span>₹ 15000</span></li>
+                    <li>Ear Lopping<span>₹ 3000</span></li>
+                    <li>Warts Removal <span>₹ 60</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Miers%20Blading"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page4" style="display:none;">
+                <h4>Permanent Hair Removal</h4>
+                <ul>
+                    <li>Upper Lip, Full Face<span>₹ 3000/5000</span></li>
+                    <li>Full Body Hair Removal<span>₹ 10000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Permanent%20Hair%20Removal"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page4" style="display:none;">
+                <h4>Mohande (each hand)</h4>
+                <ul>
+                    <li>Basic Design (Wrist)<span>₹ 400</span></li>
+                    <li>Semi Bridal (Mid)<span>₹ 700</span></li>
+                    <li>Builder Gel (Elbow)<span>₹ 1000</span></li>
+                     <li>Leg<span>₹ 500</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Mohande"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page4" style="display:none;">
+                <h4>Makeup</h4>
+                <ul>
+                    <li>Party Makeup<span>₹ 7000</span></li>
+                    <li>Basic Bridal Makeup<span>₹ 10000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Basic%20Bridal%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page4" style="display:none;">
+                <h4>Premium Makeup</h4>
+                <ul>
+                    <li>Hd Makeup (1 Sarce Change Complimentary)<span>₹ 15000</span></li>
+                    <li>Airbrush Makeup (1 Sarce Change With Pre Pleating)<span>₹ 17000</span></li>
+                    <li>Sweet Proof, Water Proof (2 Saree Change With 2 Saree Pre Pleating,)<span>₹ 25000</span></li>
+                     <li>International Bridal Makeup (2 Baree Change With 2 Sarce Pre Pleating)<span>₹ 35000</span></li>
+                      <li>Groom Makeup<span>₹ 10000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Premium%20Makeup"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page4" style="display:none;">
+                <h4>Aesthetric Treatments</h4>
+                <ul>
+                    <p style="text-align: center;">For Best Results. Treatment to be Taken in 4-6 Sitting Face Analyzing (Complimentary)</p>
+                    <li>Micro Needling Facial<span>₹ 4000</span></li>
+                    <li>Hydra Facial<span>₹ 3000</span></li>
+                    <li>BB Glow Treatment<span>₹ 5000</span></li>
+                     <li>Oxygeno Facial<span>₹ 3000</span></li>
+                     <li>Meso Gun Treatment<span>₹ 6000</span></li>
+                      <li>Photo Facial<span>₹ 4000</span></li>
+                      <li>HIFU (High Intensity Focused Ultrasound) Session (Depends on area price will be change)<span>₹ 6000</span></li>
+                      <li>Hair Regrowth Treatment (Depends on area price will be change)<span>₹ 5000</span></li>
+                      <li>Scar Removal<span>₹ 4000</span></li>
+                      <li>Back Nest, Full Body (Face, Neck)<span>₹ 15000</span></li>
+                      <li>Permanent Makeup Treatment<span>₹ 7000</span></li>
+                      <li>Deep Pigmentation Treatment<span>₹ 4500/4700/5500</span></li>
+                      <li>Face/Neck/Back Nest / Full Body<span>₹ 15000</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Aesthetic%20Treatments"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <!-- Tattoo (Page 5) -->
+            <div class="products-saloon-card saloon-page5" style="display:none;">
+                <h4>Tattoo</h4>
+                <ul>
+                     <p style="text-align: center;">(Per 500 Inches Depend Depth and Length)</p>
+                    <li>Tattoo (Per Inches)<span>₹ 500</span></li>
+                    <li>Tattoo Removal<span>₹ 500</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Tattoo"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+            <div class="products-saloon-card saloon-page5" style="display:none;">
+                <h4>Noil (Bolle Hand)</h4>
+                <ul>
+                   
+                    <li>Gel Polish With Nail Art<span>₹ 1000</span></li>
+                    <li>Soft Gel Extension<span>₹ 2000</span></li>
+                    <li>Builder Gel Extension<span>₹ 3000</span></li>
+                    <li>Acrylic Extension<span>₹ 4000</span></li>
+                    <li>Toe Extension<span>₹ 4000</span></li>
+                    <li>Select on Work Base Additional Per Hand Amount<span>₹ 500</span></li>
+                    <li>Consultation Charge<span>₹ 200</span></li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Nail%20Care"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+             <div class="products-saloon-card saloon-page5" style="display:none; align-items: center;">
+                <h4>Peels</h4>
+                <ul>
+                    <p style="text-align: center;">(Celebrity Peel) Each Peel 4000/- Get Free Consultation</p>
+                    <li>Per Sessions</li>
+                    <li>Black Peel</li>
+                    <li>Yellow Peel</li>
+                    <li>Glycolic Peel</li>
+                    <li>Lactic Peel</li>
+                    <li>Vitamin C Peel</li>
+                    <li>Kojic Peel</li>
+                    <li>Melas Peel TCA Peel</li>
+                    <li>Salic Peel</li>
+                    <li>Lip Peel</li>
+                    <li>Cosmelan Peel(Celebrity Peel)</li>
+                </ul>
+                <a href="https://wa.me/919843441062?text=Hello,%20I%20want%20Saloon%20Services%20Peels"><button class="products-btn" style="margin-left: 100px;">Enquire</button></a>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="products-pagination">
+            <span class="products-pagination-arrow" id="prev-page">&#60;</span>
+            <span class="products-pagination-page">1/10</span>
+            <span class="products-pagination-arrow" id="next-page">&#62;</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-logo-col">
+       <div class="logo"><a href="index.html"><img src="images/logo/Logo2.png" alt="N13 Logo" style="height:80px; width:80px;"></a></div>
+      </div>
+      <div style="margin-left: -110px; margin-bottom:20px">
+        <h4>Company</h4>
+        <a href="index.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block;">Home</a>
+       <a href="products.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block;">Products & Services</a>
+          <a href="academy.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block;">Academy</a>
+          <a href="contactus.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block;">Contact</a>
+      </div>
+      <div style="margin-left: -150px;">
+        <h4>Contact Us</h4>
+        <p><i class="fa fa-phone" style="margin-right:8px; margin-bottom:20px;"></i>+91 9843441062</p>
+        <p><i class="fa fa-envelope" ></i>n13beautycare.academy@gmail.com</p>
+        <div style="margin-top:1.5rem;">
+          <div style="font-weight:600; margin-bottom:20px;">Social Media</div>
+          <div class="socials" >
+             <a href="https://x.com/n13_beauty" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><i class="fa-brands fa-x-twitter" style="color:#FFC57B;"></i></a>
+            <a href="https://www.facebook.com/share/19LhNsCD95/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><i class="fab fa-facebook" style="color:#FFC57B;"></i></a>
+            <a href="https://www.instagram.com/n13_beauty_care?utm_source=ig_web_button_share_sheet&igsh=MWI2czU0b3RtemMxNw==" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><i class="fab fa-instagram" style="color:#FFC57B;"></i></a>
+            <a href="https://wa.me/9843441062" target="_blank" rel="noreferrer" class="footer-social-icon"><i class="fab fa-whatsapp" style="color:#FFC57B;"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style=" width: 400px; margin-right: -90px;">
+        <h4>Address</h4>
+        <p>Address : 
+     S 13, anna BUS STAND,
+     2ND FLOOR, PALAI ROAD,
+     THOOTHUKUDI – 628 002.
+     Phone No :  98434-41062</p>
+      </div>
+    </div>
+    <hr class="footer-divider" style="border: none; border-top: 1px solid #FFC57B; margin: 30px 0 10px 0;" />
+    <div class="footer-copyright"  style="color:#FFC57B; text-align:center;">
+      @2025 - All rights received
+    </div>
+  </footer>
+
+<!-- Hamburger menu toggle script and pagination swap script -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.getElementById('navMenu');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+
+  // Pagination swap script
+  const saloonSection = document.getElementById('saloon-section');
+  const saloonTitle = document.getElementById('saloon-title');
+  const prevPage = document.getElementById('prev-page');
+  const nextPage = document.getElementById('next-page');
+  // Pagination logic for saloon section (class-based, 5 pages)
+  let currentSaloonPage = 1;
+  const totalSaloonPages = 5;
+  const paginationPage = document.querySelector('.products-pagination-page');
+  function showSaloonPage(page) {
+    const page1Cards = document.querySelectorAll('.products-saloon-card.saloon-page1');
+    const page2Cards = document.querySelectorAll('.products-saloon-card.saloon-page2');
+    const page3Cards = document.querySelectorAll('.products-saloon-card.saloon-page3');
+    const page4Cards = document.querySelectorAll('.products-saloon-card.saloon-page4');
+    const page5Cards = document.querySelectorAll('.products-saloon-card.saloon-page5');
+    page1Cards.forEach(card => card.style.display = (page === 1) ? '' : 'none');
+    page2Cards.forEach(card => card.style.display = (page === 2) ? '' : 'none');
+    page3Cards.forEach(card => card.style.display = (page === 3) ? '' : 'none');
+    page4Cards.forEach(card => card.style.display = (page === 4) ? '' : 'none');
+    page5Cards.forEach(card => card.style.display = (page === 5) ? '' : 'none');
+    if (paginationPage) paginationPage.textContent = page + '/5';
+  }
+  function scrollToSaloonTitle() {
+    if (saloonTitle) {
+      saloonTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  function nextSaloonPage() {
+    currentSaloonPage = currentSaloonPage === totalSaloonPages ? 1 : currentSaloonPage + 1;
+    showSaloonPage(currentSaloonPage);
+    scrollToSaloonTitle();
+  }
+  function prevSaloonPage() {
+    currentSaloonPage = currentSaloonPage === 1 ? totalSaloonPages : currentSaloonPage - 1;
+    showSaloonPage(currentSaloonPage);
+    scrollToSaloonTitle();
+  }
+  if (prevPage) prevPage.addEventListener('click', prevSaloonPage);
+  if (nextPage) nextPage.addEventListener('click', nextSaloonPage);
+  // Initialize
+  showSaloonPage(currentSaloonPage);
+</script>
+</body>
+</html>
