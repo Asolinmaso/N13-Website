@@ -272,7 +272,6 @@
   gap: 20px;
   margin-bottom: 48px;
   width: 100%;
-  padding-right: 173px;
   
   
 }
@@ -343,6 +342,7 @@
   transition: background 0.2s;
   margin-left: auto;
   margin-top: auto;
+  float: right;
 }
 
 
@@ -363,7 +363,7 @@
   padding: 28px 22px 18px 22px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   position: relative;
 }
 .products-saloon-card h4 {
