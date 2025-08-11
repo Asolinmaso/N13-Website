@@ -118,7 +118,7 @@
 }
 .product-card img {
   width: 351px;
-  height: 363px;
+  height: 300px;
   margin-top: 20px;
   border-radius: 16px;
   margin-left: 20px;
@@ -154,13 +154,13 @@
 }
 .product-info h3 {
   color: #FFC57B;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 500;
   margin: 0 0 4px 0;
 }
 .product-desc {
-  color: #888;
-  font-size: 0.98rem;
+  color: #1A1518;
+  font-size: 16px;
   margin-bottom: 18px;
 }
 .product-bottom {
@@ -174,8 +174,8 @@
   color: #222;
   border-radius: 999px;
   padding: 7px 18px;
-  font-size: 1.08rem;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   display: inline-block;
 }
 .product-buy-btn {
@@ -183,12 +183,14 @@
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 7px 22px;
-  font-size: 1rem;
-  font-weight: 700;
+  padding: 8px 28px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   margin-left: 10px;
+  width: 126px;
+  height: 40px;
 }
 .product-buy-btn:hover {
   background: #FFC57B;
@@ -290,6 +292,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  margin-bottom: 80px;
 }
 .products-premium-icon {
   width: 96px;
@@ -346,9 +349,12 @@
   cursor: pointer;
   transition: background 0.2s;
   margin-left: auto;
-  margin-top: auto;
+  margin-bottom: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
   width: 110px;
   height: 40px;
+  float: right;
 }
 
 
@@ -369,17 +375,19 @@
   padding: 28px 22px 18px 22px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
 }
 .products-saloon-card h4 {
   color: #FFC57B;
-  font-size: 1.15rem;
+  font-size: 32px;
   font-weight: 700;
   margin: 0 0 12px 0;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 8px; /* spacing between child elements */
+  justify-content: flex-start;
+  text-align: left;
 }
 .products-saloon-card ul {
   list-style: none;
@@ -390,14 +398,14 @@
 .products-saloon-card ul li {
   display: flex;
   justify-content: space-between;
-  color: #222;
-  font-size: 1.02rem;
+  color: #1A1518;
+  font-size: 24px;
   margin-bottom: 6px;
 }
 .products-saloon-card ul li span {
-  color: #888;
+  color: #1A1518;
   font-weight: 600;
-  font-size: 1.02rem;
+  font-size: 20px;
 }
 .products-badge {
   background: #FFC57B;
