@@ -53,6 +53,16 @@ html, body {
 }
 
 /* Academy Testimonials Slider Custom Styles (moved from academy.html) */
+.academy-logo {
+  margin-left: 120px !important;
+  margin-right: auto;
+  padding-left: 0 !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: -15px !important;
+  height: 80px;
+}
 .academy-slider-track {
   display: flex;
   gap: 24px;
@@ -274,7 +284,7 @@ a:visited {
   color: #FFC57B;
   font-size: 72px;
   font-weight: 700;
-  margin: 0;
+  margin-left: 85px;
   letter-spacing: 1px;
 
 }
@@ -315,7 +325,8 @@ a:visited {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 24px;
-  margin-top: 0;
+  margin-top: 80px;
+
 }
 
 
@@ -342,7 +353,6 @@ a:visited {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  margin-bottom: 80px;
 }
 .products-premium-icon {
   width: 96px;
@@ -562,7 +572,7 @@ a:visited {
   color: #FFC57B;
   font-size: 72px;
   font-weight: 700;
-  margin: 0;
+  margin-left: 60px;
   letter-spacing: 1px;
 }
 .academy-container {
@@ -785,7 +795,7 @@ a:visited {
   color: #FFC57B;
   font-size: 72px;
   font-weight: 700;
-  margin: 0;
+  margin-left: 85px;
   letter-spacing: 1px;
 }
 
