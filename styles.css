@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden;
+}
 /* Right-align the saloon service button */
 .saloon-btn-wrap {
   display: flex;
@@ -1503,7 +1506,6 @@ header {
     rgba(233, 233, 233, 0.8) 50%  /* bottom 50% colored */
   );
   border-radius: 50%;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
