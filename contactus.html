@@ -63,11 +63,11 @@
         </div>
         <div class="contactus-form-wrapper">
           <h2 class="contactus-info-title">Have a question? Reach out to us</h2>
-          <form class="contactus-form" style="background:none; box-shadow:none; border-radius:0; padding-left:0; padding-right:0;">
-            <input type="text" placeholder="Name" required />
-            <input type="text" placeholder="Contact Number" required />
-            <input type="email" placeholder="Email ID" required />
-            <textarea placeholder="Message"></textarea>
+          <form class="contactus-form" id="contactForm" style="background:none; box-shadow:none; border-radius:0; padding-left:0; padding-right:0;">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="text" name="contactNumber" placeholder="Contact Number" required />
+            <input type="email" name="email" placeholder="Email ID" required />
+            <textarea name="message" placeholder="Message"></textarea>
             <button type="submit" class="contactus-submit">Submit</button>
           </form>
         </div>
@@ -142,5 +142,19 @@
     const expanded = hamburger.getAttribute('aria-expanded') === 'true';
     hamburger.setAttribute('aria-expanded', !expanded);
   });
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  
+  fetch("https://script.google.com/macros/s/AKfycbxjGpo1cBc1AwK6hi4uhwBBx57S7e8KTAuorqoG6y8wij7gCxuJZUB4dTweO73bgYfEGg/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(msg => alert(msg))
+  .catch(err => alert("Error: " + err));
+});
 </script>
 </html>

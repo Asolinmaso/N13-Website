@@ -256,7 +256,7 @@
     </div>
   </section>
 
-  <!-- Contact form -->
+   <!-- Contact form -->
   <section class="contact">
     <div class="container">
       <div class="contact-grid">
@@ -266,11 +266,11 @@
             <p>Let your beauty blossom – tell us how we can pamper you today</p>
           </div>
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Name" required />
-          <input type="text" placeholder="Contact Number" required />
-          <input type="email" placeholder="Email ID" required />
-          <span style="font-family: Poppins; "><textarea placeholder="Message"></textarea></span>
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="text" name="contactNumber"  placeholder="Contact Number" required />
+          <input type="email"  name="email" placeholder="Email ID" required />
+          <span style="font-family: Poppins; "><textarea name="message"placeholder="Message"></textarea></span>
           <button type="submit" class="contact-submit">Submit</button>
         </form>
       </div>
@@ -388,6 +388,20 @@
     });
   }
   window.addEventListener('DOMContentLoaded', initTestimonialSlider);
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  
+  fetch("https://script.google.com/macros/s/AKfycbxjGpo1cBc1AwK6hi4uhwBBx57S7e8KTAuorqoG6y8wij7gCxuJZUB4dTweO73bgYfEGg/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(msg => alert(msg))
+  .catch(err => alert("Error: " + err));
+});
 </script>
 
 </html>
