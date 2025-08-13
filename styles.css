@@ -1544,33 +1544,8 @@ header {
   align-items: center;
   margin-top: 32px;
 }
-.testimonial-img-wrap {
-  position: absolute;
-  top: -69px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  height: 140px;
-  background: linear-gradient(
-    to bottom,
-    rgba(233, 233, 233, 0) 50%,   /* top 50% transparent */
-    rgba(233, 233, 233, 0.8) 50%  /* bottom 50% colored */
-  );
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.testimonial-img-wrap img {
-  width: 117px;
-  height: 117px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .testimonial-content {
-  margin-top: 48px;
+  margin-top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
