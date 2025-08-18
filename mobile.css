@@ -1,10 +1,5 @@
-@media (max-width: 1024px) and (min-width: 769px) {
-  /* Tablet view styles go here. Example: */
-  .hero {
-    padding-top: 48%; /* slightly taller than mobile, less than desktop */
-  }
-  /* Add more tablet-specific styles below as needed */
-}
+
+
 html, body {
   overflow-x: hidden;
 }
