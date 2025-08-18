@@ -1,6 +1,6 @@
   /* Show arrows only on mobile view */
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .academy-slider-arrows {
     display: none !important;
   }
@@ -18,8 +18,8 @@ html, body {
 /* Course Card Right Corner Arrow Button */
 .course-arrow-corner {
   position: absolute;
-  left: 330px;
-  bottom: -20px;
+  left: 345px;
+  bottom: 5px;
   width: 48px;
   height: 48px;
   background: #fff;
@@ -34,10 +34,10 @@ html, body {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   z-index: 2;
-  position: relative;
+  position: absolute;
 }
-.course-arrow-corner::before {
-  content: '';
+.course-arrow-corner::after {
+  content: ''; /* REQUIRED */
   position: absolute;
   top: -10px;
   left: -10px;
@@ -45,12 +45,8 @@ html, body {
   bottom: -10px;
   border-top-left-radius: 22px;
   background: rgba(255, 197, 123, 0.07);
-  z-index: 1;
 }
-.course-arrow-corner > * {
-  position: relative;
-  z-index: 2;
-}
+
 
 /* Academy Testimonials Slider Custom Styles (moved from academy.html) */
 .academy-logo {
@@ -88,7 +84,7 @@ html, body {
     max-width: 340px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .academy-slider-track {
     gap: 8px;
   }
@@ -109,7 +105,7 @@ html, body {
     max-width: 900px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .academy-slider-wrapper {
     max-width: 98vw;
   }
@@ -154,7 +150,7 @@ html, body {
 }
 
 /* Tablet view: fit grid/cards within container */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px) and (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -1170,10 +1166,8 @@ header {
   font-weight: 600;
 }
 
-.hero {
-  height: 655px;
-  background: #ccc;
-}
+
+
 /* Who section custom styles moved from index.html */
 .who-section-padding {
   padding-top: 80px;
@@ -1349,34 +1343,10 @@ header {
   position: relative;
   min-width: 260px;
   margin-bottom: 40px;
+  /* Add right-bottom curve using a pseudo-element */
 }
 
-.course-card .course-arrow {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
-  background: #fff;
-  border: none;
-  border-bottom-right-radius: 18px;
-  border-bottom-left-radius: 16px;
-  border-top-left-radius: 16px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  padding: 0;
-  transition: background 0.2s;
-  color: #222;
-  margin-left: 100px;
-}
-.course-card .course-arrow:hover {
-  box-shadow: #FFC57B12;
-  color: #fff;
-}
+
 .course-card .course-bottom {
   padding-right: 60px;
 }
@@ -1422,26 +1392,6 @@ header {
   font-weight: 600;
   letter-spacing: 0.2px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-}
-.course-arrow {
-  background: #fff;
-  border: 1.5px solid #F6F6F6;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-  color: #222;
-  font-size: 1.1rem;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.course-arrow:hover {
-  background: #FFC57B;
-  color: #fff;
 }
 
 .card-grid {
