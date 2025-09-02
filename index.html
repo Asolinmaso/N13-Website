@@ -17,6 +17,17 @@
   /* maintain 16:9 aspect ratio (you can change 56.25% to another ratio) */
   padding-top: 56.25%; 
   overflow: hidden;
+  margin-top: 20px; /* Add margin to separate from header */
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .hero iframe,
@@ -28,6 +39,120 @@
   height: 100%;
   object-fit: cover; /* makes sure video fills nicely */
   border: none;
+  border-radius: 8px; /* Add rounded corners */
+}
+
+/* Ensure video controls stay within bounds */
+.hero iframe {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+/* Additional video player styling for better control containment */
+.hero {
+  box-sizing: border-box;
+}
+
+/* Ensure Vimeo player controls stay within bounds */
+.hero iframe[src*="vimeo"] {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Force Vimeo player to respect container boundaries */
+.hero iframe[src*="vimeo"] {
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  position: absolute !important;
+}
+
+/* Ensure header is always visible and properly positioned */
+header {
+  z-index: 1001; /* Ensure header is above video player */
+}
+
+/* Add container constraints for video */
+.hero {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure video player doesn't overflow on small screens */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Additional Vimeo player control containment */
+.hero iframe[src*="vimeo"] {
+  transform: none !important;
+  transform-origin: 0 0 !important;
+}
+
+/* Force Vimeo player to stay within container */
+.hero iframe[src*="vimeo"] {
+  clip-path: inset(0 0 0 0) !important;
+  clip: rect(0, auto, auto, 0) !important;
+}
+
+/* Video wrapper containment */
+.video-wrapper {
+  clip-path: inset(0 0 0 0);
+  clip: rect(0, auto, auto, 0);
+}
+
+/* Additional containment for Vimeo player */
+.hero iframe[src*="vimeo"] {
+  /* Force containment */
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  
+  /* Prevent overflow */
+  overflow: hidden !important;
+  
+  /* Force positioning */
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  
+  /* Prevent transformations */
+  transform: none !important;
+  transform-origin: 0 0 !important;
+  
+  /* Clip to container */
+  clip-path: inset(0 0 0 0) !important;
+  clip: rect(0, auto, auto, 0) !important;
+  
+  /* Box model */
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  /* Ensure no scaling */
+  scale: 1 !important;
+  zoom: 1 !important;
+}
+
+/* Force video wrapper to contain everything */
+.video-wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  border-radius: 8px;
+  z-index: 1;
 }
 
   </style>
@@ -60,14 +185,32 @@
 
   <!-- Hero -->
 <section class="hero">
-    <iframe 
-      src="https://player.vimeo.com/video/1044994156?background=0&autoplay=0&loop=1&muted=0"
-
-      frameborder="0" 
-      allow="autoplay; fullscreen; picture-in-picture" 
-      title="Hero Video">
-    </iframe>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://player.vimeo.com/video/1044994156?background=1&autoplay=0&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
+        frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture" 
+        title="Hero Video">
+      </iframe>
+      <div class="play-button-overlay">
+        <div class="play-button">
+          <i class="fa fa-play"></i>
+        </div>
+      </div>
+    </div>
     <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+      // Initialize Vimeo player
+      var iframe = document.querySelector('.hero iframe');
+      var player = new Vimeo.Player(iframe);
+      
+      // Play button click handler
+      document.querySelector('.play-button-overlay').addEventListener('click', function() {
+        player.play();
+        // Hide play button after clicking
+        this.style.display = 'none';
+      });
+    </script>
   </section>
 
 
@@ -77,12 +220,16 @@
     <div class="container who-content">
       <h2 class="who-title">Who we are</h2>
       <div class="who-inner">
-        <img src="images/1.png" alt="Salon" class="who-img" />
-        <p>At N13 Beauty Care, we believe beauty begins with healthy, nourished skin. Our products are crafted with
-          gentle, effective ingredients to suit every skin type. Whether you're starting your skincare journey or
-          enhancing it, we’re here to guide you. Trusted by many, our mission is to make self-care simple, safe, and
-          satisfying. Discover beauty that feels as good as it looks—with N13. Because true beauty isn’t just about how
-          you look, but how confident, empowered, and radiant you feel every single day.</p>
+        <div class="who-image-container">
+          <img src="images/1.png" alt="Salon" class="who-img" />
+        </div>
+        <div class="who-text-container">
+          <p>At N13 Beauty Care, we believe beauty begins with healthy, nourished skin. Our products are crafted with
+            gentle, effective ingredients to suit every skin type. Whether you're starting your skincare journey or
+            enhancing it, we’re here to guide you. Trusted by many, our mission is to make self-care simple, safe, and
+            satisfying. Discover beauty that feels as good as it looks—with N13. Because true beauty isn't just about how
+            you look, but how confident, empowered, and radiant you feel every single day.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -129,21 +276,23 @@
         <div class="card">
           <img src="images/p2.png" style="width: 100%; height: 468px;" />
           <div class="card-overlay">
-            <h3>SUNSHADE</h3>
-            <p>sunscreen UV | 50 ml</p>
+            <h3>Sunshade</h3>
+            <p>Sunscreen UV | 50 ml</p>
           </div>
         </div>
         <div class="card">
           <img src="images/p3.png" style="width: auto; height: 468px;" />
           <div class="card-overlay">
-            <h3>Joy skin fruit</h3>
-            <p> light moisturiser | 150 ml</p>
+            <h3>Joy Skin fruit</h3>
+            <p> Light moisturiser | 150 ml</p>
 
           </div>
         </div>
       </div>
-      <button class="product-btn"><a href="product.html" style="color:inherit; text-decoration:none;">View
-          all</a></button>
+      <div class="button-wrapper">
+        <button class="product-btn"><a href="product.html" style="color:inherit; text-decoration:none;">View
+            all</a></button>
+      </div>
     </div>
   </section>
 
@@ -232,7 +381,11 @@
             <div class="testimonial-text">Their service was very friendly. When I looked at the offers, everything was
               offered at a good price. They provide excellent quality services, including cost-effective services, at a
               low price. Therefore, everyone should definitely visit Thoothukudi queens.</div>
-            <div class="testimonial-quote"><i class="fa fa-quote-right"></i></div>
+            <div class="testimonial-quote">
+              <svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.972 0.151855L34.012 3.99186V8.47186C34.012 11.2879 33.5427 14.0185 32.604 16.6639C31.6654 19.3092 30.3 21.8692 28.508 24.3439C26.8014 26.7332 24.7107 28.9519 22.236 30.9999C21.468 30.5732 20.828 30.1039 20.316 29.5919C19.804 29.0799 19.3347 28.4399 18.908 27.6719C21.0414 25.7092 22.7054 23.7465 23.9 21.7839C25.18 19.8212 26.0334 17.7732 26.46 15.6399L19.932 12.3119V3.99186L26.972 0.151855ZM9.05204 0.151855L16.092 3.99186V8.47186C16.092 11.2879 15.6227 14.0185 14.684 16.6639C13.7454 19.3092 12.38 21.8692 10.588 24.3439C8.88137 26.7332 6.7907 28.9519 4.31604 30.9999C3.54804 30.5732 2.90804 30.1039 2.39604 29.5919C1.88404 29.0799 1.4147 28.4399 0.988037 27.6719C3.12137 25.7092 4.78537 23.7465 5.98004 21.7839C7.26004 19.8212 8.11337 17.7732 8.54004 15.6399L2.01204 12.3119V3.99186L9.05204 0.151855Z" fill="#1A1518" fill-opacity="0.1"/>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="testimonial-card">
@@ -247,7 +400,11 @@
             </div>
             <div class="testimonial-text">I took their offer haircut the experience was too good and ambience too and
               their customer service also very good and over all the experience was good.</div>
-            <div class="testimonial-quote"><i class="fa fa-quote-right"></i></div>
+            <div class="testimonial-quote">
+              <svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.972 0.151855L34.012 3.99186V8.47186C34.012 11.2879 33.5427 14.0185 32.604 16.6639C31.6654 19.3092 30.3 21.8692 28.508 24.3439C26.8014 26.7332 24.7107 28.9519 22.236 30.9999C21.468 30.5732 20.828 30.1039 20.316 29.5919C19.804 29.0799 19.3347 28.4399 18.908 27.6719C21.0414 25.7092 22.7054 23.7465 23.9 21.7839C25.18 19.8212 26.0334 17.7732 26.46 15.6399L19.932 12.3119V3.99186L26.972 0.151855ZM9.05204 0.151855L16.092 3.99186V8.47186C16.092 11.2879 15.6227 14.0185 14.684 16.6639C13.7454 19.3092 12.38 21.8692 10.588 24.3439C8.88137 26.7332 6.7907 28.9519 4.31604 30.9999C3.54804 30.5732 2.90804 30.1039 2.39604 29.5919C1.88404 29.0799 1.4147 28.4399 0.988037 27.6719C3.12137 25.7092 4.78537 23.7465 5.98004 21.7839C7.26004 19.8212 8.11337 17.7732 8.54004 15.6399L2.01204 12.3119V3.99186L9.05204 0.151855Z" fill="#1A1518" fill-opacity="0.1"/>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="testimonial-card">
@@ -262,7 +419,11 @@
             </div>
             <div class="testimonial-text">I get 1499 combo offer... it was so amazing experience ... i am very
               satisfied... thanak u N13.</div>
-            <div class="testimonial-quote"><i class="fa fa-quote-right"></i></div>
+            <div class="testimonial-quote">
+              <svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.972 0.151855L34.012 3.99186V8.47186C34.012 11.2879 33.5427 14.0185 32.604 16.6639C31.6654 19.3092 30.3 21.8692 28.508 24.3439C26.8014 26.7332 24.7107 28.9519 22.236 30.9999C21.468 30.5732 20.828 30.1039 20.316 29.5919C19.804 29.0799 19.3347 28.4399 18.908 27.6719C21.0414 25.7092 22.7054 23.7465 23.9 21.7839C25.18 19.8212 26.0334 17.7732 26.46 15.6399L19.932 12.3119V3.99186L26.972 0.151855ZM9.05204 0.151855L16.092 3.99186V8.47186C16.092 11.2879 15.6227 14.0185 14.684 16.6639C13.7454 19.3092 12.38 21.8692 10.588 24.3439C8.88137 26.7332 6.7907 28.9519 4.31604 30.9999C3.54804 30.5732 2.90804 30.1039 2.39604 29.5919C1.88404 29.0799 1.4147 28.4399 0.988037 27.6719C3.12137 25.7092 4.78537 23.7465 5.98004 21.7839C7.26004 19.8212 8.11337 17.7732 8.54004 15.6399L2.01204 12.3119V3.99186L9.05204 0.151855Z" fill="#1A1518" fill-opacity="0.1"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -296,53 +457,67 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-grid">
-      <div class="footer-logo-col">
-        <div class="logo"><a href="index.html"><img src="images/logo/Logo2.png" alt="N13 Logo"
-              style="height:80px; width:80px;"></a></div>
+    <div class="footer-main-content">
+      <div class="footer-logo-section">
+        <div class="footer-logo">
+          <img src="images/logo/Logo1.png" alt="N13 Logo" style="height:60px; width:60px;">
+        </div>
       </div>
-      <div style="margin-left: -90px; margin-bottom:20px; margin-right: 40px;">
-        <h4>Company</h4>
-        <a href="index.html"
-          style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Home</a>
-        <a href="product.html"
-          style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Products</a>
-        <a href="products.html"
-          style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Services</a>
-        <a href="academy.html"
-          style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Academy</a>
+
+      <div class="footer-company-section">
+        <h3 class="footer-company-title">Company</h3>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="product.html" class="footer-link">Products</a>
+          <a href="products.html" class="footer-link">Services</a>
+          <a href="academy.html" class="footer-link">Academy</a>
+        </div>
       </div>
-      <div style="margin-left: -130px;">
-        <h4>Contact Us</h4>
-        <p><i class="fa fa-phone" style="margin-right:8px; margin-bottom:24px; font-size: 16px; gap: 8px;"></i>+91 9843441062</p>
-        <p><i class="fa fa-envelope" style="font-size: 16px; gap: 8px;"></i> n13beautycare.academy@gmail.com</p>
-        <div style="margin-top:1.5rem;">
-          <h4>Social Media</h4>
-          <div class="socials">
-            <a href="https://x.com/n13_beauty" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><img
-                 src="images/twit.svg" alt="Twitter" style="width:28px; height:28px; vertical-align:middle;" /></a>
-            <a href="https://www.facebook.com/share/19LhNsCD95/?mibextid=wwXIfr" target="_blank"
-              rel="noopener noreferrer" class="footer-social-icon"><img src="images/Vector.svg" alt="Facebook"
-                style="width:28px; height:28px; vertical-align:middle;" /></a>
-            <a href="https://www.instagram.com/n13_beauty_care?utm_source=ig_web_button_share_sheet&igsh=MWI2czU0b3RtemMxNw=="
-              target="_blank" rel="noopener noreferrer" class="footer-social-icon"><img src="images/insta.svg"
-                alt="Instagram" style="width:28px; height:28px; vertical-align:middle;" /></a>
-            <a href="https://wa.me/9843441062" target="_blank" rel="noreferrer" class="footer-social-icon"><img
-                src="images/wp.svg" alt="WhatsApp" style="width:28px; height:28px; vertical-align:middle;" /></a>
+
+      <div class="footer-contact-section">
+        <h3 class="footer-contact-title">Contact Us</h3>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <i class="fa fa-phone footer-contact-icon"></i>
+            <span class="footer-contact-text">+91 9843441062</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-envelope footer-contact-icon"></i>
+            <span class="footer-contact-text">n13beautycare.academy@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="footer-social-section">
+          <h3 class="footer-social-title">Social Media</h3>
+          <div class="footer-social-icons">
+            <a href="https://x.com/n13_beauty" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+              <img src="images/twitter.png" alt="Twitter" style="width:24px; height:24px;" />
+            </a>
+            <a href="https://www.facebook.com/share/19LhNsCD95/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+              <img src="images/facebook.png" alt="Facebook" style="width:24px; height:24px;" />
+            </a>
+            <a href="https://www.instagram.com/n13_beauty_care?utm_source=ig_web_button_share_sheet&igsh=MWI2czU0b3RtemMxNw==" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+              <img src="images/instagram.png" alt="Instagram" style="width:24px; height:24px;" />
+            </a>
+            <a href="https://wa.me/9843441062" target="_blank" rel="noreferrer" class="footer-social-icon">
+              <img src="images/whatsapp.png" alt="WhatsApp" style="width:24px; height:24px;" />
+            </a>
           </div>
         </div>
       </div>
-      <div style=" width: 300px; ">
-        <h4>Address</h4>
-        <p>
-          S 13, anna BUS STAND,
-          2ND FLOOR, PALAI ROAD,
-          THOOTHUKUDI – 628 002.</p>
+
+      <div class="footer-address-section">
+        <h3 class="footer-address-title">Address</h3>
+        <p class="footer-address-text">
+          S 13, Anna Bus Stand,
+          2nd Floor, Palai Road,
+          Thoothukudi – 628 002.
+        </p>
       </div>
     </div>
-    <hr class="footer-divider" style="border: none; border-top: 1px solid #FFC57B; margin: 30px 0 10px 0;" />
-    <div class="footer-copyright" style="color:#FFC57B; text-align:center; margin-top: 24px; margin-bottom: -24px;">
-      @2025 - All rights received
+
+    <div class="footer-copyright">
+      <span class="footer-copyright-text">@2025 - All rights received</span>
     </div>
   </footer>
 </body>

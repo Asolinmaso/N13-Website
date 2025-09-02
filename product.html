@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | N13 Beauty Care</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" />
     <link rel="stylesheet" href="styles.css" media="screen and (min-width: 1024px)" />
     <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1025px)" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
     <!-- Header / Navigation -->
     <header>
         <div class="container nav">
              <div class="logo"><a href="index.html"><img src="images/logo/Logo1.png" alt="N13 Logo" style="height:80px; width:80px; "></a></div>
+            <!-- Hamburger button for mobile -->
             <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
         <span></span>
         <span></span>
@@ -440,42 +441,63 @@
    
 <!-- Footer -->
   <footer>
-    <div class="container footer-grid">
-      <div class="footer-logo-col">
-       <div class="logo"><a href="index.html"><img src="images/logo/Logo2.png" alt="N13 Logo" style="height:80px; width:80px;"></a></div>
+    <div class="footer-main-content">
+      <div class="footer-logo-section">
+        <div class="footer-logo">
+          <img src="images/logo/Logo1.png" alt="N13 Logo" style="height:60px; width:60px;">
+        </div>
       </div>
-      <div style="margin-left: -90px; margin-bottom:20px; margin-right: 40px;">
-        <h4>Company</h4>
-        <a href="index.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Home</a>
-       <a href="product.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Products</a>
-          <a href="products.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Services</a>
-          <a href="academy.html" style="color:inherit; text-decoration:none; margin-bottom:20px; display:block; font-size: 16px;">Academy</a>
+      <div class="footer-company-section">
+        <h3 class="footer-company-title">Company</h3>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="product.html" class="footer-link">Products</a>
+          <a href="products.html" class="footer-link">Services</a>
+          <a href="academy.html" class="footer-link">Academy</a>
+        </div>
       </div>
-      <div style="margin-left: -130px;">
-        <h4>Contact Us</h4>
-        <p><i class="fa fa-phone" style="margin-right:8px; margin-bottom:24px; font-size: 16px;"></i>+91 9843441062</p>
-        <p><i class="fa fa-envelope" style="font-size: 16px; "></i>   n13beautycare.academy@gmail.com</p>
-        <div style="margin-top:1.5rem;">
-          <div style="font-weight:600; margin-bottom:20px; font-size: 24px;">Social Media</div>
-          <div class="socials" >
-            <a href="https://x.com/n13_beauty" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><img src="images/twit.svg" alt="Twitter" style="width:28px; height:28px; vertical-align:middle;" /></a>
-            <a href="https://www.facebook.com/share/19LhNsCD95/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><img src="images/Vector.svg" alt="Facebook" style="width:28px; height:28px; vertical-align:middle;" /></a>
-            <a href="https://www.instagram.com/n13_beauty_care?utm_source=ig_web_button_share_sheet&igsh=MWI2czU0b3RtemMxNw==" target="_blank" rel="noopener noreferrer" class="footer-social-icon"><img src="images/insta.svg" alt="Instagram" style="width:28px; height:28px; vertical-align:middle;" /></a>
-            <a href="https://wa.me/9843441062" target="_blank" rel="noreferrer" class="footer-social-icon"><img src="images/wp.svg" alt="WhatsApp" style="width:28px; height:28px; vertical-align:middle;" /></a>
+      <div class="footer-contact-section">
+        <h3 class="footer-contact-title">Contact Us</h3>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <i class="fa fa-phone footer-contact-icon"></i>
+            <span class="footer-contact-text">+91 9843441062</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-envelope footer-contact-icon"></i>
+            <span class="footer-contact-text">n13beautycare.academy@gmail.com</span>
+          </div>
+        </div>
+        <div class="footer-social-section">
+          <h3 class="footer-social-title">Social Media</h3>
+          <div class="footer-social-icons">
+            <a href="https://x.com/n13_beauty" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+              <img src="images/twitter.png" alt="Twitter" style="width:24px; height:24px;" />
+            </a>
+            <a href="https://www.facebook.com/share/19LhNsCD95/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+              <img src="images/facebook.png" alt="Facebook" style="width:24px; height:24px;" />
+            </a>
+            <a href="https://www.instagram.com/n13_beauty_care?utm_source=ig_web_button_share_sheet&igsh=MWI2czU0b3RtemMxNw==" target="_blank" rel="noopener noreferrer" class="footer-social-icon">
+              <img src="images/instagram.png" alt="Instagram" style="width:24px; height:24px;" />
+            </a>
+            <a href="https://wa.me/9843441062" target="_blank" rel="noreferrer" class="footer-social-icon">
+              <img src="images/whatsapp.png" alt="WhatsApp" style="width:24px; height:24px;" />
+            </a>
           </div>
         </div>
       </div>
-      <div style=" width: 300px; ">
-        <h4>Address</h4>
-        <p>
-     S 13, anna BUS STAND,
-     2ND FLOOR, PALAI ROAD,
-     THOOTHUKUDI – 628 002.</p>
+      <div class="footer-address-section">
+        <h3 class="footer-address-title">Address</h3>
+        <p class="footer-address-text">
+          S 13, Anna Bus Stand,
+          2nd Floor, Palai Road,
+          Thoothukudi – 628 002.
+        </p>
       </div>
     </div>
-    <hr class="footer-divider" style="border: none; border-top: 1px solid #FFC57B; margin: 30px 0 10px 0;" />
-    <div class="footer-copyright"  style="color:#FFC57B; text-align:center; margin-top: 24px; margin-bottom: -24px;">
-      @2025 - All rights received
+
+    <div class="footer-copyright">
+      <span class="footer-copyright-text">@2025 - All rights received</span>
     </div>
   </footer>
 </body>
