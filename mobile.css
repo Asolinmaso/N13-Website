@@ -1851,6 +1851,11 @@ footer {
   margin-top: 40px;
 }
 
+/* Remove margin-top from footer on contact page */
+.contact-page footer {
+  margin-top: 0;
+}
+
 .footer-main-content {
   display: flex;
   flex-direction: column;

@@ -1010,7 +1010,6 @@ a:visited {
 }
 
 .contact {
-  padding: 60px 0 60px 0;
   margin-bottom: 80px;
   width: 100%;
 }
@@ -1769,6 +1768,11 @@ footer {
   gap: 60px;
   margin-top: 80px;
   box-sizing: border-box;
+}
+
+/* Remove margin-top from footer on contact page */
+.contact-page footer {
+  margin-top: 0;
 }
 
 .footer-main-content {
