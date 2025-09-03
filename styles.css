@@ -326,18 +326,17 @@ a:visited {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 18px 0 rgba(0,0,0,0.08);
-  width: 400px;
   height: 380px;
   min-width: 340px;
-  padding: 28px 28px 18px 28px;
+  padding: 28px 28px 18px 22px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
 }
 .products-premium-icon {
-  width: 96px;
-  height: 98px;
+  width: 80px;
+  height: 80px;
   background: #FFF6E8;
   border-radius: 50%;
   display: flex;
@@ -346,8 +345,7 @@ a:visited {
   margin-bottom: 4px;
 }
 .products-premium-icon img {
-  width: 60px;
-  height: 73px;
+
   object-fit: contain;
   object-position: center;
 }
@@ -551,6 +549,7 @@ a:visited {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 32px;
+  margin-top: 46px;
   margin-left: 0;
   text-align: left;
   position: relative;
@@ -1236,7 +1235,7 @@ nav ul li {
 
 /* Who section custom styles moved from index.html */
 .who-section-padding {
-  padding-top: 80px;
+  padding-top: 10px;
   padding-bottom: 80px;
   padding-left: 40px;
   padding-right: 40px;
@@ -1304,7 +1303,7 @@ nav ul li {
   height: 650px;
   text-align: left;
   position: relative;
-   margin-bottom: 80px;
+   margin-bottom: 20px;
 }
 .expertise-title {
   color: #FFC57B;
@@ -1323,7 +1322,6 @@ nav ul li {
   display: flex;
   justify-content: space-between;
   gap: 84px;
-  padding-left: 40px;
   padding-right: 30px;
   margin-bottom: 40px;
 }
@@ -1383,6 +1381,21 @@ nav ul li {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
+/* Products section styling to start closer to header */
+.products {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.products h2 {
+  margin-top: 10px;
+}
+
+.products .courses-subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
 .products-card-gap {
   gap: 50px;
 }
@@ -1403,7 +1416,7 @@ nav ul li {
 }
 
 .courses {
-  padding: 40px 0 40px 0;
+  padding: 40px 0 10px 0;
   background: rgba(255, 197, 123, 0.07);
 }
 .courses-subtitle {
@@ -1416,7 +1429,7 @@ nav ul li {
   display: flex;
   gap: 20px;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
 }
 
@@ -1427,7 +1440,6 @@ nav ul li {
   overflow: hidden;
   flex: 1;
   max-width: 400px;
-  height: 495px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1499,14 +1511,14 @@ nav ul li {
   }
 }
 .course-info {
-  padding: 22px 18px 12px 18px;
+  padding: 22px 18px 22px 18px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 .course-info h3 {
   color: #FFC57B;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   margin-bottom: 8px;
   margin: 0 0 6px 0;
@@ -1550,7 +1562,6 @@ nav ul li {
   position: relative;
   overflow: hidden;
   background: #000;
-  margin-bottom: 40px;
 }
 
 
@@ -1607,8 +1618,7 @@ nav ul li {
   color: #222;
   font-size: 24px;
   font-weight: 400;
-  margin-top: 6px;
-  margin-bottom: 64px;
+
 }
 .testimonial-grid {
   display: flex;
@@ -1949,7 +1959,6 @@ footer {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -1963,7 +1972,6 @@ footer {
   bottom: 0;
   background: #FFC57B;
   opacity: 0;
-  transition: opacity 0.3s ease;
   z-index: 1;
 }
 
@@ -1975,13 +1983,7 @@ footer {
   object-fit: contain;
 }
 
-.footer-social-icon:hover {
-  transform: scale(1.05);
-}
 
-.footer-social-icon:hover::before {
-  opacity: 1;
-}
 
 
 
@@ -2025,10 +2027,9 @@ footer {
   padding: 24px 0;
   gap: 20px;
   width: 100%;
-  max-width: 1214px;            /* align with main row */
   height: auto;
   border-top: 1px solid #FFC57B;
-  margin: 0 auto;               /* centered */
+  margin: 0;                    /* remove auto margin to span full width */
   box-sizing: border-box;
 }
 
@@ -2071,7 +2072,8 @@ footer {
 
   .footer-copyright {
     padding: 24px 20px;
-    max-width: 100%;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -2174,7 +2176,7 @@ footer {
   font-family: 'Inter', sans-serif;
   text-align: center;
   display: block;
-  margin: 24px auto 80px auto;
+  margin: 40px auto 40px auto;
   cursor: pointer;
   letter-spacing: 0.2px;
   line-height: 1;
@@ -2200,7 +2202,6 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 40px 0;
 }
 .product-btn1 {
   background-color: #1A1A1A;

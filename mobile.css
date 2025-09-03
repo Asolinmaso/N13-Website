@@ -1342,7 +1342,7 @@ body {
   height: auto;
   text-align: center;
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   box-sizing: border-box;
 }
 .expertise-title {
@@ -1531,6 +1531,21 @@ body {
   padding-top: 80px;
   padding-bottom: 80px;
   margin-bottom: 32px;
+}
+
+/* Products section styling to start closer to header */
+.products {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.products h2 {
+  margin-top: 5px;
+}
+
+.products .courses-subtitle {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 .products-card-gap {
   gap: 50px;
@@ -1906,7 +1921,6 @@ footer {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -1920,7 +1934,6 @@ footer {
   bottom: 0;
   background: #FFC57B;
   opacity: 0;
-  transition: opacity 0.3s ease;
   z-index: 1;
 }
 
@@ -1932,18 +1945,7 @@ footer {
   object-fit: contain;
 }
 
-.footer-social-icon:hover {
-  border-color: #FFA94D;
-  transform: scale(1.05);
-}
 
-.footer-social-icon:hover::before {
-  opacity: 1;
-}
-
-.footer-social-icon:hover img {
-  transform: scale(1.1);
-}
 
 .footer-copyright {
   box-sizing: border-box;
