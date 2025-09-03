@@ -46,14 +46,12 @@ html, body {
 /* Academy Testimonials Slider Custom Styles (moved from academy.html) */
 .academy-slider-track {
   display: flex;
-  gap: 24px;
   justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
 }
 .academy-testimonial-card {
-  width: 440px;
-  min-width: 440px;
+ 
   max-width: 440px;
   flex: 1 0 0;
   margin: 0;
@@ -119,7 +117,6 @@ html, body {
   align-items: stretch;
   min-width: 391px;
   width: 391px;
-  height: 533px;
   position: relative;
   transition: box-shadow 0.2s;
 }
@@ -154,7 +151,7 @@ html, body {
   }
 }
 .product-info {
-  padding: 18px 18px 12px 18px;
+  padding: 18px 18px 18px 18px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -730,11 +727,7 @@ a:visited {
 }
 
 
-/* Testimonials */
-.academy-testimonials {
-  padding: 80px 0 40px 0;
-  margin-bottom: 80px;
-}
+
 .academy-testimonials-title{
   font-size: 40px;
   margin-left: 0;
@@ -749,8 +742,8 @@ a:visited {
   margin-top: 32px;
 }
 .academy-testimonial-video {
-  width: 391px;
-  height: 759px;
+  width: 350px;
+  height: 677px;
   border-radius: 16px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
   object-fit: cover;
@@ -759,7 +752,6 @@ a:visited {
 }
 .academy-slider-track {
   display: flex;
-  gap: 2px;
   justify-content: center;
   align-items: stretch;
   flex-wrap: nowrap;
