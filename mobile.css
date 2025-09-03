@@ -1856,6 +1856,19 @@ footer {
   margin-top: 0;
 }
 
+/* Make social media icons black in contact page "Get in touch" section */
+.contact-page .contactus-socials .footer-social-icon {
+  border: 2px solid #000000;
+  background: #ffffff;
+}
+
+
+
+/* Other social media icons: white background with black icons */
+.contact-page .contactus-socials .footer-social-icon:not([href*="x.com"]) img {
+  filter: brightness(0);
+}
+
 .footer-main-content {
   display: flex;
   flex-direction: column;
