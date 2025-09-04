@@ -166,7 +166,6 @@ html, body {
   align-items: center;
   justify-content: flex-end;
   margin-top: auto;
-  padding: 0 18px 18px 18px;
 }
 .product-price {
   background: #F0EBEB;
@@ -182,7 +181,7 @@ html, body {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 20px 12px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -204,7 +203,6 @@ html, body {
   height: 24px;
   background: #444444;
   border-radius: 50%;
-  margin-left: 8px;
   position: relative;
 }
 .product-buy-btn::after {
@@ -262,7 +260,6 @@ a:visited {
   margin: 0;
   letter-spacing: 1px;
   padding: 0 20px;
-  text-align: center;
 }
 
 /* Responsive padding for products hero text */
@@ -1216,7 +1213,7 @@ body {
   
   .product-buy-btn {
     font-size: 13px;
-    padding: 6px 10px;
+    padding: 20px 12px;
     height: 32px;
     min-width: 70px;
   }
@@ -1923,13 +1920,12 @@ footer {
 }
 
 .footer-logo-section {
-  text-align: center;
+  width: 100%;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 auto;
 }
 
@@ -1946,19 +1942,17 @@ footer {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
-  text-align: center;
 }
 
 .footer-company-section,
 .footer-contact-section,
 .footer-address-section {
-  text-align: center;
   width: 100%;
   margin-bottom: 8px;
 }
 
 .footer-link {
-  color: #f0f0f0;
+  color: #FFC57B;
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -1973,7 +1967,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: center;
   margin-top: 12px;
 }
 
@@ -1981,7 +1974,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: center;
   margin-top: 12px;
 }
 
@@ -1989,15 +1981,13 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
-  justify-content: center;
-  color: #f0f0f0;
+  color: #FFC57B;
 }
 
 .footer-address-text {
-  color: #f0f0f0;
+  color: #FFC57B;
   font-size: 14px;
   line-height: 1.5;
-  text-align: center;
   margin-top: 12px;
 }
 
@@ -2006,14 +1996,12 @@ footer {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
-  text-align: center;
   margin-top: 12px;
 }
 
 .footer-social-icons {
   display: flex;
   gap: 12px;
-  justify-content: center;
   flex-wrap: wrap;
   margin-top: 16px;
 }
@@ -2061,10 +2049,11 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 20px 20px;
-  width: 100%;
+  width: calc(100% + 40px);
   border-top: 1px solid #FFC57B;
-  margin: 0;
+  margin: 0 -20px;
   background: rgba(255, 197, 123, 0.05);
+  position: relative;
 }
 
 .footer-copyright-text {
@@ -2390,7 +2379,6 @@ footer {
   .footer-contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 0px;
     gap: 24px;
     width: 338px;
@@ -2522,11 +2510,12 @@ footer {
     align-items: center;
     padding: 24px 0;
     gap: 20px;
-    width: 100%;
+    width: 100vw;
     height: auto;
     border-top: 1px solid #FFC57B;
-    margin: 0;
+    margin: 0 -20px;
     box-sizing: border-box;
+    position: relative;
   }
 
   .footer-copyright-text {
