@@ -1404,7 +1404,7 @@ nav ul li {
 }
 
 .courses {
-  padding: 40px 0 10px 0;
+  padding: 40px 0 20px 0;
   background: rgba(255, 197, 123, 0.07);
 }
 .courses-subtitle {
@@ -1414,6 +1414,7 @@ nav ul li {
   margin-bottom: 24px;
 }
 .card-grid {
+  padding-bottom: 20px;
   display: flex;
   gap: 20px;
   flex-wrap: nowrap;
@@ -1452,6 +1453,7 @@ nav ul li {
 @media (max-width: 1200px) {
   .card-grid {
     gap: 15px;
+    padding-bottom: 20px;
   }
   .course-card {
     min-width: 260px;
@@ -1468,6 +1470,7 @@ nav ul li {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 20px;
   }
   .course-card {
     flex: 1 1 calc(50% - 10px);
@@ -1485,6 +1488,7 @@ nav ul li {
   .card-grid {
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 20px;
   }
   .course-card {
     flex: 1 1 100%;
@@ -1538,6 +1542,7 @@ nav ul li {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 .card {

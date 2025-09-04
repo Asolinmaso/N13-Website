@@ -1052,14 +1052,11 @@ a:visited {
   margin-right: 4px;
 }
 
-.contact {
-  padding: 60px 0 20px 0;
-}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   align-items: stretch;
-  gap: 20px;
 }
 .contact-image-box {
   background: url('images/contact.jpg') center center/cover no-repeat;
@@ -1097,7 +1094,6 @@ a:visited {
   /* background: #F0EBEB; */ /* Commenting out the background color */
   background: none; /* Setting background to none */
   border-radius: 18px;
-  padding: 32px 28px 28px 28px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1129,14 +1125,13 @@ a:visited {
   border: none;
   border-radius: 999px;
   padding: 8px 16px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   align-self: flex-end;
-  margin-top: 8px;
   cursor: pointer;
   transition: background 0.2s;
-  width: 76px;
-  height: 34px;
+  width: 127px;
+  height: 46px;
 }
 
 nav ul {
@@ -1226,11 +1221,42 @@ body {
     min-width: 70px;
   }
   
-  
   .product-card img {
-
     margin-left: 15px;
     margin-right: 15px;
+  }
+  
+  .testimonial-card {
+    width: 100%;
+    min-width: 280px;
+    min-height: 260px;
+    padding: 20px 24px 45px 24px;
+  }
+  
+  .testimonial-quote {
+    bottom: 12px;
+  }
+  
+  .testimonial-quote svg {
+    width: 28px;
+    height: 24px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .testimonial-card {
+    min-height: 240px;
+    padding: 16px 20px 40px 20px;
+  }
+  
+  .testimonial-quote {
+    bottom: 10px;
+  }
+  
+  .testimonial-quote svg {
+    width: 24px;
+    height: 20px;
   }
 }
   .hamburger {
@@ -1384,7 +1410,6 @@ body {
 .expertise-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
   padding: 0 20px;
   margin-bottom: 32px;
   max-width: 100%;
@@ -1464,7 +1489,6 @@ body {
   }
   
   .expertise-grid {
-    gap: 24px;
     padding: 0 16px;
   }
   
@@ -1514,7 +1538,6 @@ body {
   }
   
   .expertise-grid {
-    gap: 20px;
     padding: 0 12px;
   }
   
@@ -1587,7 +1610,7 @@ body {
 }
 
 .courses {
-  padding: 24px 0 24px 0;
+  padding-top: 10px;
   background: rgba(255, 197, 123, 0.07);
 }
 .courses-subtitle {
@@ -1599,8 +1622,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 24px;
   padding-left: 0;
+  padding-bottom: 10px;
  
 }
 .course-card {
@@ -1667,7 +1690,6 @@ body {
 
 .card-grid {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -1745,7 +1767,8 @@ body {
   box-shadow: 0 4px 18px 0 rgba(0,0,0,0.08);
   width: 400px;
   min-width: 320px;
-  padding: 28px 36px 18px 36px;
+  min-height: 280px;
+  padding: 28px 36px 50px 36px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1784,13 +1807,14 @@ body {
   z-index: 2;
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .testimonial-quote svg {
   width: 30px;
   height: 26px;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1) contrast(1);
 }
 
 .testimonial-quote:hover {
@@ -1842,7 +1866,6 @@ body {
 .contact-grid {
   display: flex;
 flex-direction: column;
-  gap: 24px;
   padding-left: 0;
 }
 
@@ -2171,6 +2194,8 @@ footer {
     margin: 0 auto;
     padding-left: 113px;
     padding-right: 113px;
+    position: relative;
+    height: 80px;
   }
 
   .logo {
@@ -2521,18 +2546,18 @@ footer {
   border: none;
   border-radius: 999px;
   padding: 8px 16px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   text-align: center;
   display: block;
-  margin: 32px auto 32px auto;
   cursor: pointer;
   letter-spacing: 0.2px;
+  margin: auto;
   line-height: 1;
   transition: background-color 0.3s ease;
-  width: 80px;
-  height: 34px;
+  width: 127px;
+  height: 46px;
   position: relative;
 }
 
@@ -2554,7 +2579,6 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 30px 0;
 }
 
 /* Ensure video controls don't exceed video boundaries */
