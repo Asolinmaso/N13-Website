@@ -31,6 +31,24 @@ html, body {
   color: #fff;
   transform: scale(1.05);
 }
+
+/* Courses We Offer section - Home page mobile styles */
+/* Add more gap around View All button */
+.courses .product-btn {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+/* Add more gap around 3rd course card */
+.courses .course-card:nth-child(3) {
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Additional spacing for course cards */
+.courses .card-grid {
+  gap: 32px !important;
+}
 /* Academy Testimonials Slider Custom Styles (moved from academy.html) */
 .academy-slider-track {
   display: flex;
@@ -385,16 +403,16 @@ a:visited {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
   margin-left: auto;
   margin-top: auto;
   float: right;
-  width: 78px;
-  height: 34px;
+  width: 120px;
+  height: 48px;
 }
 
 
@@ -697,15 +715,15 @@ a:visited {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
   font-weight: 600;
   float: right;
   align-self: flex-end;
   margin-top: 0px;
   cursor: pointer;
-  width: 76px;
-  height: 36px;
+  width: 120px;
+  height: 48px;
   transition: background 0.2s;
   margin-bottom: 36px;
 }
@@ -714,14 +732,14 @@ a:visited {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
   font-weight: 600;
   align-self: flex-end;
   margin-top: 0;
   float: right;
-  width: 76px;
-  height: 36px;
+  width: 120px;
+  height: 48px;
   margin-right: 0;
   cursor: pointer;
   transition: background 0.2s;
@@ -732,11 +750,11 @@ a:visited {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
   font-weight: 600;
-  width: 76px;
-  height: 36px;
+  width: 120px;
+  height: 48px;
   float: right;
   align-self: flex-end;
   margin-top: 0;
@@ -1121,12 +1139,14 @@ a:visited {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 20px 40px;
-  font-size: 18px;
+  padding: 14px 28px;
+  font-size: 16px;
   font-weight: 600;
   align-self: flex-end;
   cursor: pointer;
   transition: background 0.2s;
+  width: 140px;
+  height: 48px;
 }
 
 nav ul {
@@ -1454,7 +1474,7 @@ body {
   background: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-weight: 600;
   font-size: 16px;
   margin: 20px auto 0 auto;
@@ -1462,8 +1482,8 @@ body {
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(255, 197, 123, 0.3);
   line-height: 1;
-  width: 120px;
-  height: 44px;
+  width: 140px;
+  height: 48px;
   transition: all 0.3s ease;
 }
 
@@ -1512,10 +1532,10 @@ body {
   }
   
   .expertise-btn {
-    width: 110px;
-    height: 40px;
-    font-size: 15px;
-    padding: 10px 20px;
+    width: 140px;
+    height: 48px;
+    font-size: 16px;
+    padding: 14px 28px;
   }
 }
 
@@ -1559,9 +1579,9 @@ body {
   }
   
   .expertise-btn {
-    width: 100px;
-    height: 36px;
-    font-size: 14px;
+    width: 140px;
+    height: 48px;
+    font-size: 16px;
   }
 }
 
@@ -2533,8 +2553,8 @@ footer {
   color: #FFC57B;
   border: none;
   border-radius: 999px;
-  padding: 30px 60px;
-  font-size: 18px;
+  padding: 14px 28px;
+  font-size: 16px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   text-align: center;
@@ -2544,7 +2564,8 @@ footer {
   margin: auto;
   line-height: 1;
   transition: background-color 0.3s ease;
-
+  width: 140px;
+  height: 48px;
   position: relative;
 }
 
@@ -2676,6 +2697,7 @@ footer {
   border-radius: 0 0 16px 0;
   z-index: 1;
 }
+
 
 .makeup-course-img {
   width: 100%;
